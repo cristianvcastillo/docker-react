@@ -1,13 +1,10 @@
-language: ruby
-rvm :
-  - 2.3.3
-
 sudo: required
 services:
   - docker
 
 
 before_install:
+  - gem install rake
   - docker build -t cristianvcastillo/docker-react -f Dockerfile.dev . 
 
 script:
